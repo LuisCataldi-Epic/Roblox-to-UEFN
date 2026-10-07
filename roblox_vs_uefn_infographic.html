@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox vs UEFN: A Developer's Infographic Breakdown</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              roblox: {
+                50: '#fff1f1',
+                100: '#ffdfdf',
+                500: '#e11d48',
+                600: '#be123c',
+                700: '#9f1239',
+                dark: '#1a0508'
+              },
+              uefn: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                500: '#0284c7',
+                600: '#0369a1',
+                700: '#03584a',
+                dark: '#081424'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1, h2, h3, .font-display {
+        font-family: 'Outfit', sans-serif;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .dark .glass-card {
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(51, 65, 85, 0.8);
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-500 via-indigo-600 to-sky-500 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                    R⚡U
+                </div>
+                <div>
+                    <span class="font-display font-bold text-lg tracking-tight bg-gradient-to-r from-rose-600 to-sky-600 bg-clip-text text-transparent">Roblox vs UEFN</span>
+                    <span class="block text-xs text-slate-500 dark:text-slate-400 font-medium">Developer's Walkthrough Infographic</span>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#overview" class="hover:text-rose-600 dark:hover:text-rose-400 transition">The Shift</a>
+                <a href="#matrix" class="hover:text-rose-600 dark:hover:text-rose-400 transition">Quick Matrix</a>
+                <a href="#steps" class="hover:text-rose-600 dark:hover:text-rose-400 transition">Core Steps</a>
+                <a href="#cheat-sheet" class="hover:text-rose-600 dark:hover:text-rose-400 transition">Cheat Sheet</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="toggleDarkMode()" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="#steps" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-medium text-sm hover:opacity-90 transition shadow-sm">
+                    Explore Breakdown
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950">
+        <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-900/50 text-rose-600 dark:text-rose-400 text-xs font-semibold mb-6 shadow-sm">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Designed for Roblox Creators Learning UEFN</span>
+            </div>
+            
+            <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+                From <span class="text-rose-600 dark:text-rose-500">Roblox</span> to <span class="text-sky-600 dark:text-sky-400">UEFN</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Building the same project two ways. Understand the mental shift, structural differences, and equivalent tools between Roblox Studio and Unreal Editor for Fortnite.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto text-left">
+                <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 flex items-start space-x-3">
+                    <div class="p-2.5 rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 mt-0.5">
+                        <i class="fa-solid fa-cube text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-sm">Roblox Paradigm</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Strict explorer, script-first logic, Luau scripts, immediate publishing & instant playtests.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-md border border-slate-200 dark:border-slate-700 flex items-start space-x-3">
+                    <div class="p-2.5 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 mt-0.5">
+                        <i class="fa-solid fa-vr-cardboard text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-sm">UEFN Paradigm</h3>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Freeform outliner, devices-first workflow, Verse language, live edit & portal moderation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="py-16 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white mb-4">The Big Mental Shift</h2>
+                <p class="text-slate-600 dark:text-slate-400">Moving from Roblox to UEFN requires letting go of some core assumptions while leveraging your existing programming fundamentals.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Shift 1 -->
+                <div class="glass-card p-6 rounded-2xl shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-indigo-500/10 rounded-bl-full pointer-events-none"></div>
+                    <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fa-solid fa-sitemap"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">Hierarchy & Structure</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                        <strong>Roblox:</strong> Explorer enforces strict folder locations (Workspace, ServerScriptService, etc.).<br>
+                        <strong>UEFN:</strong> Outliner is freeform, following standard Unreal Engine actor conventions.
+                    </p>
+                    <span class="inline-block px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 text-xs font-semibold">Different Approach</span>
+                </div>
+
+                <!-- Shift 2 -->
+                <div class="glass-card p-6 rounded-2xl shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-rose-500/10 rounded-bl-full pointer-events-none"></div>
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-950 text-rose-600 dark:text-rose-400 flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">Default Instinct</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                        <strong>Roblox:</strong> Almost everything is solved by writing a Luau script.<br>
+                        <strong>UEFN:</strong> A lot of gameplay comes from placing pre-built <em>Creative Devices</em>; Verse is for custom logic only.
+                    </p>
+                    <span class="inline-block px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-400 text-xs font-semibold">Different Approach</span>
+                </div>
+
+                <!-- Shift 3 -->
+                <div class="glass-card p-6 rounded-2xl shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/10 rounded-bl-full pointer-events-none"></div>
+                    <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">What Transfers Directly</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+                        <strong>Roblox & UEFN:</strong> Core programming fundamentals—variables, functions, events, and logic paradigms—apply directly once writing Verse.
+                    </p>
+                    <span class="inline-block px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-xs font-semibold">Same / Transfers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="matrix" class="py-16 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-rose-600 dark:text-rose-400 font-semibold text-sm uppercase tracking-wider">Quick Comparison</span>
+                    <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white mt-1">Roblox vs UEFN Terminology Matrix</h2>
+                </div>
+                <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 md:mt-0">Click any row or search to inspect equivalents.</p>
+            </div>
+
+            <!-- Search bar -->
+            <div class="mb-6 relative">
+                <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-search"></i>
+                </span>
+                <input type="text" id="matrixSearch" onkeyup="filterMatrix()" placeholder="Search equivalent tools (e.g., Script, Terrain, DataStore)..." class="w-full pl-11 pr-4 py-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500 text-sm shadow-sm">
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse" id="comparisonTable">
+                        <thead>
+                            <tr class="bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 text-xs uppercase tracking-wider">
+                                <th class="py-4 px-6 font-semibold">Concept / Category</th>
+                                <th class="py-4 px-6 font-semibold text-rose-600 dark:text-rose-400"><i class="fa-brands fa-roblox mr-1.5"></i> Roblox Equivalent</th>
+                                <th class="py-4 px-6 font-semibold text-sky-600 dark:text-sky-400"><i class="fa-solid fa-gamepad mr-1.5"></i> UEFN Equivalent</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-sm">
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Hierarchy System</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Explorer (Strict Folders)</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Outliner (Freeform Unreal)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Objects / Meshes</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Part / Model</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Actor / Static Mesh</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Programming Language</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Luau (Script / LocalScript)</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Verse (Verse Device)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Data Persistence</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">DataStoreService</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Verse Persistence (&lt;persistable&gt;)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Collaboration</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Team Create</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Live Edit</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Playtesting</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Play button in Studio</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Launch Session (Fortnite client)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Management Hub</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Creator Hub</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Creator Portal</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Monetization</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Passes & Developer Products</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Engagement Payout Pool</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Character Rigs</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">R15 / R6 Rig</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">MetaHuman / Skeletal Mesh</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Particle Effects</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">ParticleEmitter</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Niagara System</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">UI System</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">ScreenGui</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">UMG (Unreal Motion Graphics)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Terrain Sculpting</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Voxel-based Terrain Editor</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Heightfield Landscape Tool</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                                <td class="py-4 px-6 font-medium text-slate-900 dark:text-white">Lighting</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Lighting Service Properties</td>
+                                <td class="py-4 px-6 text-slate-600 dark:text-slate-300">Lumen Real-Time Global Illumination</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider">Comprehensive Walkthrough</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mt-2">Step-by-Step Developer Comparison</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-3">Explore each phase of building and publishing a game across both ecosystems.</p>
+            </div>
+
+            <!-- Steps Container -->
+            <div class="space-y-12">
+
+                <!-- Step 2: Blocking Out Your World -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
+                            02
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Blocking Out Your World</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Basic Geometry, Terrain & Pre-built gameplay mechanics</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-2xl bg-rose-50/60 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30">
+                            <div class="flex items-center space-x-2 text-rose-600 dark:text-rose-400 font-bold text-sm mb-2">
+                                <i class="fa-brands fa-roblox"></i>
+                                <span>Roblox Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span>Insert Parts (blocks, spheres, wedges) with physics and materials built in.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span>Voxel-based Terrain Editor to sculpt and paint materials.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span>No direct equivalent for pre-built gameplay pieces—everything is built from Parts plus scripts.</span></li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-sky-50/60 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/30">
+                            <div class="flex items-center space-x-2 text-sky-600 dark:text-sky-400 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>UEFN Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Place Actors/meshes; physics and materials require explicit setup via Chaos physics.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Heightfield-based Landscape tool with a similar sculpt-and-paint workflow.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Creative Devices palette provides drag-and-drop gameplay mechanics with no code.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Setting Up Your Character -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
+                            03
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Setting Up Your Character</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Avatar Rigs & Custom Import Pipelines</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-2xl bg-rose-50/60 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30">
+                            <div class="flex items-center space-x-2 text-rose-600 dark:text-rose-400 font-bold text-sm mb-2">
+                                <i class="fa-brands fa-roblox"></i>
+                                <span>Roblox Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span>Standardizes on R15 (15-mesh) or R6 rigs, using Bone instances for skinning.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span>Imports FBX from Blender or Maya via the built-in Importer.</span></li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-sky-50/60 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/30">
+                            <div class="flex items-center space-x-2 text-sky-600 dark:text-sky-400 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>UEFN Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Uses MetaHuman, or the standard Skeletal Mesh plus Control Rig system.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Imports FBX from Maya or Blender through the standard UE pipeline.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 & 5: Writing Code & Devices vs Code -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
+                            04-05
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Writing Code & Rethinking Logic</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Luau vs. Verse, Scripts vs. Devices</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-2xl bg-rose-50/60 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30">
+                            <div class="flex items-center space-x-2 text-rose-600 dark:text-rose-400 font-bold text-sm mb-2">
+                                <i class="fa-brands fa-roblox"></i>
+                                <span>Roblox Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span>Insert a Script into ServerScriptService or a Part directly in Explorer.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span><code class="bg-rose-100 dark:bg-rose-900/50 px-1 py-0.5 rounded text-xs">print("Hello, Roblox!")</code> runs immediately as a loose script.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span>Script everything: reach for a script whenever you need custom behavior.</span></li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-sky-50/60 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/30">
+                            <div class="flex items-center space-x-2 text-sky-600 dark:text-sky-400 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>UEFN Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Create a Verse file from a Device template in Verse Explorer, then place it as a device in your level.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Build-then-place is a required extra step.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span>Drag pre-built Devices (Capture Area, Damage Volume) first—reach for Verse only when devices can't do what you need.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6, 7 & 8: UI, Audio/Lighting & Testing -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
+                            06-08
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">UI, Lighting, Effects & Playtesting</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">ScreenGui vs UMG, ParticleEmitter vs Niagara, Team Create vs Live Edit</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-2xl bg-rose-50/60 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30">
+                            <div class="flex items-center space-x-2 text-rose-600 dark:text-rose-400 font-bold text-sm mb-2">
+                                <i class="fa-brands fa-roblox"></i>
+                                <span>Roblox Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span><strong>UI:</strong> ScreenGui & UI objects (Frame, TextLabel) in Explorer.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span><strong>Lighting/VFX:</strong> Built-in Lighting service properties & ParticleEmitter instances.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span><strong>Playtest:</strong> Click Play in Studio for instant simulation; Team Create for live editing.</span></li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-sky-50/60 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/30">
+                            <div class="flex items-center space-x-2 text-sky-600 dark:text-sky-400 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>UEFN Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span><strong>UI:</strong> Design in UMG, wire interactivity in Verse.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span><strong>Lighting/VFX:</strong> Lumen real-time global illumination & Niagara VFX system.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span><strong>Playtest:</strong> Launch Session runs a real running Fortnite client; Live Edit lets collaborators edit inside the running game.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 9, 10, 11 & 12: Data, Monetization, Publish & Launch -->
+                <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-md">
+                            09-12
+                        </div>
+                        <div>
+                            <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Data Persistence, Monetization & Publishing</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">DataStore vs Verse Persistence, Passes vs Engagement Pool, Two-Stage Moderation</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-2xl bg-rose-50/60 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30">
+                            <div class="flex items-center space-x-2 text-rose-600 dark:text-rose-400 font-bold text-sm mb-2">
+                                <i class="fa-brands fa-roblox"></i>
+                                <span>Roblox Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span><strong>Data:</strong> DataStoreService key-value get/set calls. Flexible data shapes.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span><strong>Monetization:</strong> Creator Hub website setup for Gamepasses and repeatable Developer Products.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-rose-500 mt-1.5 mr-2"></i><span><strong>Publishing:</strong> File → Publish in Studio. Immediate publishing with post-moderation.</span></li>
+                            </ul>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-sky-50/60 dark:bg-sky-950/20 border border-sky-100 dark:border-sky-900/30">
+                            <div class="flex items-center space-x-2 text-sky-600 dark:text-sky-400 font-bold text-sm mb-2">
+                                <i class="fa-solid fa-gamepad"></i>
+                                <span>UEFN Approach</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span><strong>Data:</strong> Verse classes marked <code class="bg-sky-100 dark:bg-sky-900/50 px-1 py-0.5 rounded text-xs">&lt;persistable&gt;&lt;final&gt;</code>. Changing data shape later can break saves.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span><strong>Monetization:</strong> No per-item store setup; revenue comes from the engagement-based payout pool.</span></li>
+                                <li class="flex items-start"><i class="fa-solid fa-circle-dot text-xs text-sky-500 mt-1.5 mr-2"></i><span><strong>Publishing:</strong> Project dropdown → Publish Project, Creator Portal review, IARC questionnaire, and Developer Program enrollment.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="cheat-sheet" class="py-20 bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm uppercase tracking-wider">Quick Reference</span>
+                <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white mt-2">The Roblox → UEFN Cheat Sheet</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2">Your 15-second translation guide for transitioning between engines.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Explorer</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Outliner</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Part / Model</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Actor</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Script (Luau)</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Verse Device</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">DataStoreService</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Verse Persistence</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Team Create</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Live Edit</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Play Button</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Launch Session</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Creator Hub</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Creator Portal</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Passes / Dev Products</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Engagement Payout Pool</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">R15 / R6 Rig</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">MetaHuman / Skeletal Mesh</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">ParticleEmitter</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Niagara System</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">ScreenGui</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">UMG</span>
+                </div>
+                <div class="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-between shadow-sm">
+                    <span class="font-medium text-rose-600 dark:text-rose-400 text-sm">Voxel Terrain</span>
+                    <i class="fa-solid fa-arrow-right text-xs text-slate-400"></i>
+                    <span class="font-medium text-sky-600 dark:text-sky-400 text-sm">Heightfield Landscape</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 text-center text-slate-500 dark:text-slate-400 text-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="font-display font-medium text-slate-900 dark:text-white mb-2">Roblox to UEFN Developer's Walkthrough</p>
+            <p class="text-xs">Based on the comprehensive multi-step guide for creators transitioning between platforms.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Check user preference on load
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Search Filter for Comparison Matrix
+        function filterMatrix() {
+            const input = document.getElementById('matrixSearch').value.toLowerCase();
+            const table = document.getElementById('comparisonTable');
+            const trs = table.getElementsByTagName('tr');
+
+            for (let i = 1; i < trs.length; i++) {
+                const tds = trs[i].getElementsByTagName('td');
+                let match = false;
+                for (let j = 0; j < tds.length; j++) {
+                    if (tds[j].textContent.toLowerCase().includes(input)) {
+                        match = true;
+                        break;
+                    }
+                }
+                trs[i].style.display = match ? '' : 'none';
+            }
+        }
+    </script>
+</body>
+</html>
